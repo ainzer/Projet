@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Jarditou.com</title>
+</head>
+
+<body class="mx-2 mx-md-4">
+    <header class="justify-content-between align-items-center d-none d-md-flex ">
+        <div class="logo">
+            <img src="img/jarditou_logo.jpg" alt="Logo de l'entreprise"
+                class="logo img-fluid w-50 mx-auto d-block d-sm-none float-start">
+            <img src="img/jarditou_logo.jpg" alt="Logo de l'entreprise"
+                class="logo img-fluid w-25 mx-auto d-none d-sm-block float-start">
+        </div>
+        <div class="header-phrase text-end">
+            <p class="fw-bold display-3 text-nowrap">Tout le jardin</p>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Jarditou.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tableau.html">Tableau</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html" aria-disabled="true">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Votre promotion" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="image-container">
+        <img src="img/promotion.jpg" alt="Promotion" class="img-fluid w-100">
+    </div>
+
+    <div class="container-fluid">
+        <p>* Ces zones sont obligatoires</p>
+
+        <form class="needs-validation" novalidate>
+            <h2>Vos Coordonnées</h2>
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom*</label>
+                <input type="text" class="form-control" id="nom" placeholder="Veuillez saisir votre nom" required>
+                <div class="invalid-feedback">
+                    Veuillez saisir votre nom.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Prénom*</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Veuillez saisir votre prénon" required>
+                <div class="invalid-feedback">
+                    Veuillez saisir votre prénom.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sexe*</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexe" id="féminin" value="féminin">
+                    <label class="form-check-label" for="féminin">
+                        Féminin
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexe" id="masculin" value="masculin">
+                    <label class="form-check-label" for="masculin">
+                        Masculin
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="dateNaissance" class="form-label">Date de naissance*</label>
+                <input type="date" class="form-control" id="dateNaissance" required>
+                <div class="invalid-feedback">
+                    Veuillez saisir votre date de naissance.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="codePostal" class="form-label">Code postal*</label>
+                <input type="text" class="form-control" id="codePostal" placeholder="Veuillez saisir votre code postal"
+                    required>
+                <div class="invalid-feedback">
+                    Veuillez saisir votre code postal.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="adresse" class="form-label">Adresse</label>
+                <input type="text" class="form-control" id="adresse" placeholder="Veuillez saisir votre adresse"
+                    required>
+                <div class="invalid-feedback">
+                    Veuillez saisir votre adresse.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="ville" class="form-label">Ville</label>
+                <input type="text" class="form-control" id="ville" placeholder="Veuillez saisir votre ville" required>
+                <div class="invalid-feedback">
+                    Veuillez saisir votre ville.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email*</label>
+                <input type="email" class="form-control" id="email" placeholder="dave.loper@afpa.fr" required>
+                <div class="invalid-feedback">
+                    Veuillez saisir une adresse email valide.
+                </div>
+            </div>
+
+            <h2>Votre demande</h2>
+            <div class="mb-3">
+                <label for="sujet" class="form-label">Sujet*</label>
+                <select class="form-select" aria-label="Default select example" required>
+                    <option selected  value="">Veuillez sélectionner un sujet</option>
+                    <option value="1">Mes commandes</option>
+                    <option value="2">Question sur un produit</option>
+                    <option value="3">Réclamation</option>
+                    <option value="4">Autres</option>
+                </select>
+                <div class="invalid-feedback">
+                    Veuillez sélectionner un sujet.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="floatingTextarea">Votre question* :</label>
+                <textarea class="form-control" id="floatingTextarea" required></textarea>
+                <div class="invalid-feedback">
+                    Veuillez saisir votre question.
+                </div>
+            </div>
+            <div class="form-check form-check-inline mb-3">
+                <input class="form-check-input" type="checkbox" id="checkbox" required>
+                <label class="form-check-label" for="checkbox">
+                    J'accepte le traitement informatique de ce formulaire.
+                </label>
+                <div class="invalid-feedback">
+                    Vous devez accepter le traitement informatique.
+                </div>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-dark">Envoyer</button>
+                <button type="reset" class="btn btn-dark">Annuler</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="mb-4"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">mentions légales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">horaires</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" aria-disabled="true">plan du site</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+        integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script>
+            (function () {
+        'use strict';
+
+        var forms = document.querySelectorAll('.needs-validation');
+
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+    })();
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+    "name": "tony/phase10",
+    "autoload": {
+        "psr-4": {
+            "Tony\\Phase10\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tony",
+            "email": "127862337+ainzer@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    }
+}
