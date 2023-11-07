@@ -1,36 +1,37 @@
 <?php
 session_start();
+require_once 'user_data.php';
 
-// Les identifiants corrects (à des fins d'exemple)
-$correctLogin = 'admin';
-$correctPassword = 'admin';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-// Vérification des données du formulaire
-if (isset($_POST['login']) && isset($_POST['password'])) {
-    $userLogin = $_POST['login'];
-    $userPassword = $_POST['password'];
+    $login = $_POST['email'];
+    $password = $_POST['password'];
 
-    // Vérification des identifiants
-    if ($userLogin === $correctLogin && $userPassword === $correctPassword) {
-        // Authentification réussie
+    // Recherche de l'utilisateur par email
+    // $user = null;
+    foreach ($users as $u) {
+        if ($u['email'] === $login) {
+            $user = $u;
+            break;
+        }
+    }
+
+    // var_dump($user);
+
+    if ($user !== null && password_verify($password, $user['password'])) {
         $_SESSION['auth'] = 'ok';
-
-        // Stockez les données dans un fichier txt
-        $userData = "Login: $userLogin\nPassword: $userPassword";
-        file_put_contents('user_data.txt', $userData);
-
-        header('Location: protected_page.php'); // Rediriger vers la page protéger
+        // echo "OK";
+        header('Location: page_protegee.php');
         exit();
     } else {
-        // Authentification échouée
-        session_destroy(); // Détruire la session
-        header('Location: login_form.php'); // Rediriger vers la page de connexion
+        unset($_SESSION['auth']);
+        // echo "KO";
+        header('Location: login_form.php');
         exit();
     }
-} else {
-    // Rediriger si les données du formulaire ne sont pas présentes
+}
+else {
+    // echo "Formulaire KO";
     header('Location: login_form.php');
     exit();
 }
-
-?>
